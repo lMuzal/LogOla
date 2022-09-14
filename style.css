@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#fdc534), color-stop(#c75a48), to(#6e3144));
+  background: linear-gradient(90deg, #fdc534, #c75a48, #6e3144);
+  height: 2000px;
+}
+
+.wrapper .menu-button {
+  padding: 4% 2% 4% 4%;
+}
+
+.wrapper .menu-button .fa-bars {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2.5%;
+  font-size: 30px;
+  color: antiquewhite;
+  z-index: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.wrapper .menu-button .fa-bars:hover {
+  color: #c75a48;
+}
+
+.wrapper .brand-name {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  color: antiquewhite;
+  font-family: 'Poiret One';
+}
+
+.menu-bar {
+  width: 100vw;
+  height: 10vh;
+  background: -webkit-gradient(linear, left top, right top, from(#6e3144), color-stop(#c75a48), to(#fdc534));
+  background: linear-gradient(90deg, #6e3144, #c75a48, #fdc534);
+  position: fixed;
+  top: 0;
+  left: 0;
+  translate: -1500px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+  list-style: none;
+  font-family: roboto;
+  -webkit-box-shadow: 0px 0px 6px white;
+          box-shadow: 0px 0px 6px white;
+}
+
+ul .menu-button-container {
+  min-width: 15%;
+}
+
+ul li {
+  font-size: 0.7rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: antiquewhite;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: transparent;
+}
+
+ul li:hover {
+  cursor: pointer;
+  color: #6e3144;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.certificates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.certificate1, .certificate2, .certificate3, .certificate4 {
+  height: 100px;
+  width: 150px;
+  margin: 2%;
+  background-size: cover;
+  translate: -2000px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.certificate1:hover, .certificate2:hover, .certificate3:hover, .certificate4:hover {
+  cursor: pointer;
+  scale: 1.5;
+}
+
+.certificate1:focus, .certificate2:focus, .certificate3:focus, .certificate4:focus {
+  scale: 3;
+  margin: 11%;
+}
+
+.certificate1 {
+  background-image: url(imgs/1000_F_201825112_dm1tHvITOxrZf7tA1lCSLLytD3ppx0nQ.jpg);
+}
+
+.certificate2 {
+  background-image: url(imgs/classy-ornamental-certificate-template-beige-black_53876-116396.jpg);
+}
+
+.certificate3 {
+  background-image: url(imgs/depositphotos_77528488-stock-illustration-certificate-diploma-of-completion.jpg);
+}
+
+.certificate4 {
+  background-image: url(imgs/depositphotos_9725775-stock-illustration-gold-detailed-certificate.jpg);
+}
+
+@media only screen and (min-width: 660px) {
+  .brand-name {
+    padding-top: 2%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
