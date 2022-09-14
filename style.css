@@ -4,20 +4,21 @@
 }
 
 .wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh;
   background: -webkit-gradient(linear, left top, right top, from(#fdc534), color-stop(#c75a48), to(#6e3144));
   background: linear-gradient(90deg, #fdc534, #c75a48, #6e3144);
   height: 2000px;
 }
 
 .wrapper .menu-button {
-  padding: 4% 2% 4% 4%;
+  width: 100%;
+  margin: 4% 2% 4% 4%;
 }
 
 .wrapper .menu-button .fa-bars {
@@ -37,39 +38,52 @@
 }
 
 .wrapper .brand-name {
-  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 60%;
+  font-size: 1.7rem;
   letter-spacing: 5px;
   color: antiquewhite;
   font-family: 'Poiret One';
 }
 
+.wrapper #filler {
+  min-width: 20%;
+}
+
 .menu-bar {
   width: 100vw;
-  height: 10vh;
+  height: 100vh;
   background: -webkit-gradient(linear, left top, right top, from(#6e3144), color-stop(#c75a48), to(#fdc534));
   background: linear-gradient(90deg, #6e3144, #c75a48, #fdc534);
   position: fixed;
   top: 0;
   left: 0;
   translate: -1500px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
   height: 100%;
   list-style: none;
   font-family: roboto;
-  -webkit-box-shadow: 0px 0px 6px white;
-          box-shadow: 0px 0px 6px white;
 }
 
 ul .menu-button-container {
@@ -77,9 +91,9 @@ ul .menu-button-container {
 }
 
 ul li {
-  font-size: 0.7rem;
+  font-size: 1.5rem;
   width: 100%;
-  height: 100%;
+  padding-bottom: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,15 +104,16 @@ ul li {
       -ms-flex-align: center;
           align-items: center;
   color: antiquewhite;
-  -webkit-transition: 0.5s linear;
-  transition: 0.5s linear;
+  font-family: 'Poiret One';
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: transparent;
 }
 
 ul li:hover {
   cursor: pointer;
-  color: #6e3144;
+  color: transparent;
   font-weight: bolder;
   letter-spacing: 1px;
   -webkit-text-stroke-width: 1px;
@@ -147,6 +162,61 @@ ul li:hover {
 
 .certificate4 {
   background-image: url(imgs/depositphotos_9725775-stock-illustration-gold-detailed-certificate.jpg);
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#overlay #overlay-close-button {
+  margin: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+#overlay #overlay-close-button:hover {
+  background-color: black;
+  color: white;
+}
+
+#overlay .login {
+  height: 300px;
+  width: 400px;
+  background-color: antiquewhite;
+  -webkit-box-shadow: 0px 0px 10px 5px antiquewhite;
+          box-shadow: 0px 0px 10px 5px antiquewhite;
 }
 
 @media only screen and (min-width: 660px) {
