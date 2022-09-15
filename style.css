@@ -4,6 +4,16 @@
 }
 
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-wrap {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,15 +23,14 @@
           justify-content: space-between;
   background: -webkit-gradient(linear, left top, right top, from(#fdc534), color-stop(#c75a48), to(#6e3144));
   background: linear-gradient(90deg, #fdc534, #c75a48, #6e3144);
-  height: 2000px;
 }
 
-.wrapper .menu-button {
+.header-wrap .menu-button {
   width: 100%;
   margin: 4% 2% 4% 4%;
 }
 
-.wrapper .menu-button .fa-bars {
+.header-wrap .menu-button .fa-bars {
   position: -webkit-sticky;
   position: sticky;
   top: 2.5%;
@@ -33,11 +42,12 @@
   cursor: pointer;
 }
 
-.wrapper .menu-button .fa-bars:hover {
+.header-wrap .menu-button .fa-bars:hover {
   color: #c75a48;
 }
 
-.wrapper .brand-name {
+.header-wrap .brand-name {
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,8 +61,12 @@
   font-family: 'Poiret One';
 }
 
-.wrapper #filler {
+.header-wrap #filler {
   min-width: 20%;
+}
+
+.header-wrap #filler img {
+  size: 100px;
 }
 
 .menu-bar {
@@ -164,6 +178,25 @@ ul li:hover {
   background-image: url(imgs/depositphotos_9725775-stock-illustration-gold-detailed-certificate.jpg);
 }
 
+.main-wrap div {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc534), color-stop(#c75a48), to(#6e3144));
+  background: linear-gradient(90deg, #fdc534, #c75a48, #6e3144);
+  height: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main-wrap div img {
+  max-width: 50%;
+}
+
 #overlay {
   position: fixed;
   display: none;
@@ -212,11 +245,52 @@ ul li:hover {
 }
 
 #overlay .login {
-  height: 300px;
-  width: 400px;
-  background-color: antiquewhite;
-  -webkit-box-shadow: 0px 0px 10px 5px antiquewhite;
-          box-shadow: 0px 0px 10px 5px antiquewhite;
+  height: 200px;
+  width: 300px;
+  background: -webkit-gradient(linear, left top, right top, from(#fdc534), color-stop(#c75a48), to(#6e3144));
+  background: linear-gradient(90deg, #fdc534, #c75a48, #6e3144);
+  font-family: 'Poiret One';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#overlay .login h4 {
+  color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#overlay .login #login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#overlay .login #login-form input {
+  font-family: 'Poiret One';
+  color: antiquewhite;
+  font-weight: bolder;
+  background: -webkit-gradient(linear, left top, right top, from(#6e3144), color-stop(#c75a48), to(#fdc534));
+  background: linear-gradient(90deg, #6e3144, #c75a48, #fdc534);
 }
 
 @media only screen and (min-width: 660px) {
